@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 const navLinks = [
@@ -13,12 +14,17 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const isHome = location.pathname === "/";
 
   const handleNav = (href: string) => {
     setOpen(false);
-    if (href.startsWith("#")) {
+    if (isHome) {
       const el = document.querySelector(href);
       el?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/" + href);
     }
   };
 

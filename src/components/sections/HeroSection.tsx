@@ -1,6 +1,7 @@
 import { Shield, Users, Award, Clock } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import AnimatedSection from "@/components/AnimatedSection";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
   { icon: Award, label: "8 Anos de Experiência" },
@@ -10,8 +11,19 @@ const stats = [
 ];
 
 const HeroSection = () => (
-  <section id="inicio" className="gradient-hero hero-pattern pt-28 pb-20 md:pt-36 md:pb-28">
-    <div className="container text-center">
+  <section
+    id="inicio"
+    className="relative pt-28 pb-20 md:pt-36 md:pb-28"
+    style={{
+      backgroundImage: `url(${heroBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    {/* Dark overlay for text readability */}
+    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(216,70%,10%,0.85)] to-[hsl(216,62%,20%,0.9)]" />
+
+    <div className="container text-center relative z-10">
       <AnimatedSection>
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight max-w-4xl mx-auto">
           Proteção que cabe na sua vida.{" "}
@@ -20,7 +32,7 @@ const HeroSection = () => (
       </AnimatedSection>
 
       <AnimatedSection delay={0.1}>
-        <p className="mt-6 text-base md:text-lg text-primary-foreground/70 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-6 text-base md:text-lg text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed">
           Somos um corretor independente com 8 anos de experiência, mais de 1.000 clientes ativos
           e R$2 milhões em sinistros resolvidos. Atendemos você onde estiver.
         </p>
@@ -38,7 +50,7 @@ const HeroSection = () => (
           </a>
           <button
             onClick={() => document.querySelector("#seguros")?.scrollIntoView({ behavior: "smooth" })}
-            className="px-8 py-3.5 rounded-lg border-2 border-primary-foreground/30 text-primary-foreground font-semibold text-base hover:border-primary-foreground/60 transition-colors"
+            className="px-8 py-3.5 rounded-lg border-2 border-primary-foreground/40 text-primary-foreground font-semibold text-base hover:border-primary-foreground/70 transition-colors"
           >
             Conheça nossos seguros
           </button>
@@ -50,10 +62,10 @@ const HeroSection = () => (
           {stats.map((s) => (
             <div
               key={s.label}
-              className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10"
+              className="flex flex-col items-center gap-2 py-4 px-3 rounded-xl bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20"
             >
               <s.icon size={24} className="text-secondary" />
-              <span className="text-xs md:text-sm font-semibold text-primary-foreground/90">{s.label}</span>
+              <span className="text-xs md:text-sm font-semibold text-primary-foreground">{s.label}</span>
             </div>
           ))}
         </div>

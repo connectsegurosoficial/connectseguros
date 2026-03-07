@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link, Navigate, useNavigate } from "react-router-dom";
 import { ArrowLeft, Star, Quote, MessageCircle } from "lucide-react";
 import { getProductBySlug } from "@/lib/products";
+import { productImages } from "@/lib/productImages";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -16,6 +17,7 @@ const ProductPage = () => {
   if (!product) return <Navigate to="/" replace />;
 
   const Icon = product.icon;
+  const productImage = productImages[product.slug];
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,8 +52,12 @@ const ProductPage = () => {
                 </button>
               </div>
 
-              <div className="w-full md:w-80 h-64 rounded-2xl bg-primary/5 flex items-center justify-center">
-                <Icon size={80} className="text-primary/20" />
+              <div className="w-full md:w-96 h-72 rounded-2xl overflow-hidden shadow-card">
+                <img
+                  src={productImage}
+                  alt={product.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </AnimatedSection>
@@ -113,9 +119,9 @@ const ProductPage = () => {
               <div className="aspect-square rounded-2xl bg-primary/10 flex items-center justify-center">
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-3">
-                    <span className="text-3xl font-extrabold text-primary">DV</span>
+                    <span className="text-3xl font-extrabold text-primary">CS</span>
                   </div>
-                  <p className="text-sm text-muted-foreground">Davos Vinicius Queiroz</p>
+                  <p className="text-sm text-muted-foreground">Connect Seguros</p>
                 </div>
               </div>
             </AnimatedSection>
@@ -159,7 +165,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      <div className="pb-16" /> {/* Space for sticky bar */}
+      <div className="pb-16" />
 
       <Footer />
       <WhatsAppFloat />
