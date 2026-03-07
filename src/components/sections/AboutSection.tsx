@@ -9,10 +9,10 @@ const AboutSection = () => (
           <div className="aspect-[4/5] rounded-2xl bg-primary/10 flex items-center justify-center overflow-hidden">
             <div className="text-center p-8">
               <div className="w-32 h-32 rounded-full bg-primary/20 mx-auto flex items-center justify-center mb-4">
-                <span className="text-4xl font-extrabold text-primary">DV</span>
+                <span className="text-4xl font-extrabold text-primary">CS</span>
               </div>
-              <p className="text-sm text-muted-foreground">Davos Vinicius Queiroz</p>
-              <p className="text-xs text-muted-foreground mt-1">Corretor de Seguros</p>
+              <p className="text-sm text-muted-foreground">Connect Seguros</p>
+              <p className="text-xs text-muted-foreground mt-1">Corretora de Seguros</p>
             </div>
           </div>
         </AnimatedSection>
@@ -20,12 +20,12 @@ const AboutSection = () => (
         <AnimatedSection delay={0.15}>
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6">
-              Olá, sou o <span className="text-gradient">Davos.</span>
+              Conheça a <span className="text-gradient">Connect Seguros.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              Corretor autônomo com 8 anos no mercado de seguros, ajudo pessoas físicas, empresas e
+              Com 8 anos no mercado de seguros, a Connect Seguros ajuda pessoas físicas, empresas e
               produtores rurais a encontrarem a proteção certa — sem complicação e com o atendimento
-              próximo que você merece. Atendo localmente em Três Lagoas e online para todo o Brasil.
+              próximo que você merece. Atendemos localmente em Três Lagoas e online para todo o Brasil.
             </p>
 
             <div className="grid grid-cols-3 gap-4 mb-8">
