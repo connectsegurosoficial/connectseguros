@@ -58,9 +58,9 @@ const ProductPage = () => {
       
       {/* Hero - Porto Seguro style */}
       <section className="pt-16 bg-muted">
-        <div className="flex flex-col md:flex-row">
+        <div className="grid md:grid-cols-[1fr_55%]">
           {/* Left: Text content */}
-          <div className="flex-1 flex items-center">
+          <div className="flex items-center">
             <div className="container md:pr-0">
               <AnimatedSection>
                 <div className="max-w-xl py-8 md:py-16 md:pl-8 lg:pl-16">
@@ -92,11 +92,11 @@ const ProductPage = () => {
           </div>
 
           {/* Right: Full-height image */}
-          <div className="w-full md:w-1/2 lg:w-[55%] h-64 md:h-[480px] relative overflow-hidden">
+          <div className="w-full min-h-64 relative overflow-hidden md:min-h-full">
             <img
               src={productImage}
               alt={product.name}
-              className="w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         </div>
