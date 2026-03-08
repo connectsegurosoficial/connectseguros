@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { X, MessageCircle } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
+import { PhoneInput } from "react-international-phone";
 
 interface Props {
   open: boolean;
@@ -43,12 +44,26 @@ const QuoteModal = ({ open, onClose, productName }: Props) => {
             onChange={(e) => setForm({ ...form, nome: e.target.value })}
             className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50"
           />
-          <input
-            type="tel"
-            placeholder="(99) 99999-9999"
+          <PhoneInput
+            defaultCountry="br"
             value={form.whatsapp}
-            onChange={(e) => setForm({ ...form, whatsapp: e.target.value })}
-            className="w-full px-4 py-3 rounded-lg bg-muted border border-border text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50"
+            onChange={(whatsapp) => setForm({ ...form, whatsapp })}
+            placeholder="Telefone / WhatsApp"
+            className="w-full focus-within:outline-none focus-within:ring-2 focus-within:ring-secondary/50 rounded-lg"
+            style={
+              {
+                "--react-international-phone-height": "44px",
+                "--react-international-phone-background-color": "hsl(var(--muted))",
+                "--react-international-phone-text-color": "hsl(var(--foreground))",
+                "--react-international-phone-border-radius": "0.5rem",
+                "--react-international-phone-border-color": "hsl(var(--border))",
+                "--react-international-phone-font-size": "0.875rem",
+              } as CSSProperties
+            }
+            inputClassName="w-full bg-transparent px-4 focus:outline-none"
+            countrySelectorStyleProps={{
+              buttonClassName: "bg-transparent",
+            }}
           />
           <input
             type="text"

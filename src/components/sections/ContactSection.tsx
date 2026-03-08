@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MessageCircle, Instagram, Facebook, Linkedin, MapPin } from "lucide-react";
+import { MessageCircle, Instagram, Facebook, MapPin } from "lucide-react";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { products } from "@/lib/products";
 import AnimatedSection from "@/components/AnimatedSection";
@@ -88,9 +88,8 @@ const ContactSection = () => {
                 <h3 className="font-bold text-foreground mb-2">Redes sociais</h3>
                 <div className="flex gap-3">
                   {[
-                    { icon: Instagram, href: "#", label: "Instagram" },
-                    { icon: Facebook, href: "#", label: "Facebook" },
-                    { icon: Linkedin, href: "#", label: "LinkedIn" },
+                    { icon: Instagram, href: "https://www.instagram.com/connectseguros/", label: "Instagram" },
+                    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61574098310350", label: "Facebook" },
                   ].map((s) => (
                     <a
                       key={s.label}
