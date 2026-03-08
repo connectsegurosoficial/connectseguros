@@ -31,8 +31,13 @@ const Navbar = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
-        <a href="/" className="font-display font-extrabold text-xl tracking-tight text-primary">
-          Connect<span className="text-gradient"> Seguros</span>
+        <a href="/" className="flex items-center h-16">
+          <img
+            src="/logo-connect-seguros.png"
+            alt="Connect Seguros"
+            className="h-8 md:h-9 w-auto"
+            loading="eager"
+          />
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">

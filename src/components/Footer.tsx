@@ -3,9 +3,14 @@ const Footer = () => (
     <div className="container">
       <div className="grid md:grid-cols-3 gap-8 mb-8">
         <div>
-          <h3 className="font-display font-extrabold text-xl text-primary-foreground mb-2">
-            Connect<span className="text-gradient"> Seguros</span>
-          </h3>
+          <div className="mb-3">
+            <img
+              src="/logo-connect-seguros.png"
+              alt="Connect Seguros"
+              className="h-10 w-auto"
+              loading="lazy"
+            />
+          </div>
           <p className="text-sm text-primary-foreground/60">Sua proteção, nossa conexão.</p>
         </div>
 
@@ -42,7 +47,7 @@ const Footer = () => (
       </div>
 
       <div className="pt-6 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
-        Connect Seguros, 2026. © Todos os direitos reservados.
+        2026. © Todos os direitos reservados.
       </div>
     </div>
   </footer>
