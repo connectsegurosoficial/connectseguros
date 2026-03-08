@@ -36,7 +36,6 @@ const Footer = () => (
           <h4 className="font-bold text-primary-foreground text-sm mb-3">Informações legais</h4>
           <ul className="space-y-2 text-sm text-primary-foreground/60">
             <li>CNPJ: 48.361.727/0001-20</li>
-            <li>Registro SUSEP: Em processo</li>
             <li>
               <a href="#" className="hover:text-primary-foreground transition-colors">
                 Política de Privacidade
