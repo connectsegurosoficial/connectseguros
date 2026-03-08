@@ -22,10 +22,10 @@ const StatsSection = () => (
         </div>
       </AnimatedSection>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto items-stretch">
         {stats.map((s, i) => (
-          <AnimatedSection key={s.label} delay={i * 0.05}>
-            <div className="flex flex-col items-center gap-2 py-6 px-4 rounded-2xl bg-card border border-border shadow-card text-center">
+          <AnimatedSection key={s.label} delay={i * 0.05} className="h-full">
+            <div className="h-full flex flex-col items-center justify-center gap-2 py-6 px-4 rounded-2xl bg-card border border-border shadow-card text-center">
               <div className="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center">
                 <s.icon size={20} className="text-secondary" />
               </div>

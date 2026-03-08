@@ -111,15 +111,15 @@ const HeroSection = () => {
                     </AnimatedSection>
 
                     <AnimatedSection delay={0.15}>
-                      <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer">
-                          <Button className="bg-success text-primary-foreground hover:bg-success/90 h-11 px-6 font-bold">
+                      <div className="mt-8 grid grid-cols-2 gap-3 sm:flex sm:items-center">
+                        <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                          <Button className="w-full sm:w-auto bg-success text-primary-foreground hover:bg-success/90 h-11 px-6 font-bold">
                             Cote agora
                           </Button>
                         </a>
                         <Button
                           variant="outline"
-                          className="h-11 px-6 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                          className="w-full sm:w-auto h-11 px-6 bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
                           onClick={() =>
                             document.querySelector("#seguros")?.scrollIntoView({ behavior: "smooth" })
                           }
