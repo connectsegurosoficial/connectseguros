@@ -57,22 +57,19 @@ const ProductPage = () => {
       <Navbar />
       
       {/* Hero - Porto Seguro style */}
-      <section className="pt-20 md:pt-24 bg-muted">
-        <div className="container">
-          <Link
-            to="/#seguros"
-            className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors pt-4 mb-6"
-          >
-            <ArrowLeft size={16} /> Voltar
-          </Link>
-        </div>
-
+      <section className="pt-16 bg-muted">
         <div className="flex flex-col md:flex-row">
           {/* Left: Text content */}
           <div className="flex-1 flex items-center">
             <div className="container md:pr-0">
               <AnimatedSection>
                 <div className="max-w-xl py-8 md:py-16 md:pl-8 lg:pl-16">
+                  <Link
+                    to="/#seguros"
+                    className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-6"
+                  >
+                    <ArrowLeft size={16} /> Voltar
+                  </Link>
                   <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
                     {product.name}
                   </p>
