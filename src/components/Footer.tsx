@@ -42,7 +42,7 @@ const Footer = () => (
       </div>
 
       <div className="pt-6 border-t border-primary-foreground/10 text-center text-xs text-primary-foreground/40">
-        © 2025 Connect Seguros. Todos os direitos reservados.
+        Connect Seguros, 2026. © Todos os direitos reservados.
       </div>
     </div>
   </footer>
