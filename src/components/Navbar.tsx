@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#51dcff] backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <a href="/" className="flex items-center h-16">
           <img
